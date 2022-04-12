@@ -2,11 +2,12 @@ import express from "express";
 import mongoose from "mongoose";
 import Cards from './dbCards.js';
 import Cors from 'cors';
+import getUrl from './../getURL.js';
 
 // App Config
 const app = express();
 const port = process.env.port || 8001
-const connectionURL = 'mongodb+srv://ArmanNawaz:Arman123@cluster0.jxrhf.mongodb.net/tinderDB?retryWrites=true&w=majority'
+const connectionURL = getUrl();
 
 // Middlewares
 app.use(express.json());
